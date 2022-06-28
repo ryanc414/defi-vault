@@ -9,12 +9,12 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.3.2",
     "@openzeppelin/test-helpers": "^0.5.15",
-    "@truffle/hdwallet-provider": "^1.5.1",
+    "@truffle/hdwallet-provider": "^2.0.9",
     "@uniswap/v3-periphery": "^1.2.1",
     "canonical-weth": "^1.4.0",
     "chai": "^4.3.4",
     "dotenv": "^10.0.0",
-    "truffle-contract": "^4.0.31"
+    "truffle-contract": "^4.0.2"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
