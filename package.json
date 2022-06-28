@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.9",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "solhint-plugin-prettier": "^0.0.5"
   },
   "devDependencies": {
     "@openzeppelin/contracts": "^4.6.0",
@@ -34,7 +35,7 @@
     "prettier:js-check": "prettier -c *.js migrations/*.js test/*.js",
     "prettier:solidity": "prettier --write contracts/*.sol contracts/**/*.sol",
     "prettier:solidity-check": "prettier -c contracts/*.sol contracts/**/*.sol",
-    "solhint": "solhint -f table contracts/*.sol contracts/**/*.sol",
+    "solhint": "solhint -f table contracts/*.sol",
     "test": "truffle test",
     "prepare": "husky install"
   },

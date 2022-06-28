@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Mock Uniswap Swap Router for local testing purposes.
-pragma solidity >=0.8.0 <0.9.0;
+pragma solidity ^0.8.15;
 pragma abicoder v2;
 
 import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
