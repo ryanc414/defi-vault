@@ -29,6 +29,7 @@
   },
   "scripts": {
     "build": "truffle compile",
+    "deploy": "truffle migrate --network goerli",
     "eslint": "eslint *.js migrations/*.js test/*.js",
     "eslint:fix": "eslint --fix *.js migrations/*.js test/*.js",
     "prettier:js": "prettier --write *.js migrations/*.js test/*.js",

@@ -12,6 +12,6 @@ Tests are found under test/, this covers the basic functionality of the Vault
 contract. Tests may be run via `npm test`, after first installing dependencies
 via `npm install`.
 
-The Vault contract is deployed on Ropsten here:
-https://ropsten.etherscan.io/address/0x9fd473b045dc7570481d2e5c930255e3625095b7
+The Vault contract is deployed on Goerli here:
+https://goerli.etherscan.io/address/0x9697b2b7fb88f979d7bdad5a4cfab0c75d8df87e
 
