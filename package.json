@@ -7,23 +7,36 @@
     "test": "test"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.3.2",
-    "@openzeppelin/test-helpers": "^0.5.15",
     "@truffle/hdwallet-provider": "^2.0.9",
-    "@uniswap/v3-periphery": "^1.2.1",
-    "canonical-weth": "^1.4.0",
-    "chai": "^4.3.4",
-    "dotenv": "^10.0.0",
-    "truffle-contract": "^4.0.2"
+    "dotenv": "^16.0.1"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.25.2",
-    "truffle-plugin-verify": "^0.5.15"
+    "@openzeppelin/contracts": "^4.6.0",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@uniswap/v3-periphery": "^1.4.1",
+    "canonical-weth": "^1.4.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.3.7",
+    "truffle-contract": "^4.0.2",
+    "truffle-plugin-verify": "^0.5.26"
   },
   "scripts": {
-    "test": "truffle test"
+    "build": "truffle compile",
+    "eslint": "eslint *.js migrations/*.js test/*.js",
+    "eslint:fix": "eslint --fix *.js migrations/*.js test/*.js",
+    "prettier:js": "prettier --write *.js migrations/*.js test/*.js",
+    "prettier:js-check": "prettier -c *.js migrations/*.js test/*.js",
+    "prettier:solidity": "prettier --write contracts/*.sol contracts/**/*.sol",
+    "prettier:solidity-check": "prettier -c contracts/*.sol contracts/**/*.sol",
+    "solhint": "solhint -f table contracts/*.sol contracts/**/*.sol",
+    "test": "truffle test",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",

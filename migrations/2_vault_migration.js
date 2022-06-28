@@ -1,13 +1,13 @@
-const Vault = artifacts.require('Vault');
-const MockUNI = artifacts.require('MockSwapRouter');
+const Vault = artifacts.require("Vault");
+const MockUNI = artifacts.require("MockSwapRouter");
 
-const WETH = artifacts.require('canonical-weth/WETH9');
+const WETH = artifacts.require("canonical-weth/WETH9");
 
-const ropstenWETHAddr = '0xc778417e063141139fce010982780140aa0cd5ab';
-const uniSwapRouterAddr = '0xE592427A0AEce92De3Edee1F18E0157C05861564';
+const ropstenWETHAddr = "0xc778417e063141139fce010982780140aa0cd5ab";
+const uniSwapRouterAddr = "0xE592427A0AEce92De3Edee1F18E0157C05861564";
 
 async function getDeployedWETH(deployer, network) {
-  if (network === 'ropsten') {
+  if (network === "ropsten") {
     return ropstenWETHAddr;
   }
 
@@ -17,7 +17,7 @@ async function getDeployedWETH(deployer, network) {
 }
 
 async function getDeployedUni(deployer, network) {
-  if (network !== 'test') {
+  if (network !== "test") {
     return uniSwapRouterAddr;
   }
 
@@ -26,7 +26,7 @@ async function getDeployedUni(deployer, network) {
   return uni.address;
 }
 
-module.exports = async function (deployer, network) {
+module.exports = async (deployer, network) => {
   const WETHAddr = await getDeployedWETH(deployer, network);
   const uniAddr = await getDeployedUni(deployer, network);
 
